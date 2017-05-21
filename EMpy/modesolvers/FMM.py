@@ -11,7 +11,7 @@ Examples
     See L{FMM1d} and L{FMM2d}.
 
 """
-from __future__ import print_function
+
 from builtins import zip
 from builtins import range
 from builtins import object

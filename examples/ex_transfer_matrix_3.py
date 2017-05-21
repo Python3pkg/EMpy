@@ -12,7 +12,7 @@ epsilon = [1.0 ** 2 * EMpy.constants.eps0 * numpy.eye(3),
 d = numpy.array([numpy.inf, 1e-6, 2.3e-6, 0.1e-6, numpy.inf])
 
 aniso_layers = EMpy.utils.Multilayer()
-for i in xrange(len(epsilon)):
+for i in range(len(epsilon)):
     eps = EMpy.materials.EpsilonTensor(epsilon[i] * numpy.eye(3))
     mat = EMpy.materials.AnisotropicMaterial('layer_%d' % i, eps)
     layer = EMpy.utils.Layer(mat, d[i])

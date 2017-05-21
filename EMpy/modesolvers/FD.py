@@ -10,7 +10,7 @@
 @see: http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=12734&objectType=FILE
 
 """
-from __future__ import print_function
+
 from builtins import zip
 from builtins import str
 from builtins import range
@@ -1369,7 +1369,7 @@ def stretchmesh(x, y, nlayers, factor, method='PPPP'):
     nlayers *= numpy.ones(4)
     factor *= numpy.ones(4)
 
-    for idx, (n, f, m) in enumerate(zip(nlayers, factor, method.upper())):
+    for idx, (n, f, m) in enumerate(list(zip(nlayers, factor, method.upper()))):
 
         if n > 0 and f != 1:
 

@@ -83,7 +83,7 @@ class SWG(object):
         z = numpy.linspace(0, self.length, nz)
         const_z = numpy.ones_like(z)
         f = numpy.zeros((len(x), len(z)), dtype=complex)
-        for im, (coeffLHS,coeffRHS) in enumerate(zip(self.inputLHS, self.inputRHS)):
+        for im, (coeffLHS,coeffRHS) in enumerate(list(zip(self.inputLHS, self.inputRHS))):
             m = self.solver.modes[im]
             beta = 2 * numpy.pi / self.solver.wl * m.neff
             tmp = numpy.sum(m.intensity(x, x), axis=axis)

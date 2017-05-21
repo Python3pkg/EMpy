@@ -2,7 +2,7 @@
 
 """Useful functions and objects used more or less everywhere."""
 
-from __future__ import print_function
+
 from builtins import zip
 from builtins import str
 from builtins import range
